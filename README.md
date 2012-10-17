@@ -2,6 +2,8 @@
 
 GUI.DrawTexture の描画の上にパーティクルエフェクトを描画するサンプルです。
 
+![screenshot](http://cloud.github.com/downloads/keijiro/unity-fxongui/screenshot.png)
+
 ## どのように実現しているか
 
 GUI.DrawTexture は、どのように設定を行っても、すべてのカメラの描画が終了した後に描画が行われます。この制約を回避するために、GUI.DrawTexture ではなく Graphics.DrawTexture を用いています。
@@ -12,9 +14,9 @@ Graphics.DrawTexture による描画であれば、通常のゲームオブジ�
 1. GUI レイヤー / GUI カメラ
 1. Post GUI レイヤー/ Post GUI カメラ
 
-このサンプルでは、背後に流れている箱（これもパーティクルエフェクトです）はデフォルトレイヤーに置き、メインカメラで描画しています。その上のチェッカー模様の矩形は GUI レイヤーに属する GUITest ゲームオブジェクトが描画しており、これには Graphics.DrawTexture を使っています。最後に、星の飛び散るエフェクトは Post GUI レイヤーに置き、Post GUI カメラで映しています。
+このサンプルでは、背後に流れている箱（これもパーティクルエフェクトです）はデフォルトレイヤーに置き、メインカメラで描画しています。その上のチェッカー模様の矩形は GUI レイヤーに属する [GUITest](https://github.com/keijiro/unity-fxongui/blob/master/Assets/GUITest.js) が描画しており、これには Graphics.DrawTexture を使っています。最後に、星の飛び散るエフェクトは Post GUI レイヤーに置き、Post GUI カメラで映しています。
 
-なお、GUI をスクリーン座標系上で描画するには、GUI カメラを画面解像度に併せて調節する必要があります。この処理は GUICamera スクリプトの中に実装しました。
+なお、GUI をスクリーン座標系上で描画するには、GUI カメラを画面解像度に併せて調節する必要があります。この処理は [GUICamera スクリプト](https://github.com/keijiro/unity-fxongui/blob/master/Assets/GUICamera.js)の中に実装しました。
 
 ## ポイント
 
