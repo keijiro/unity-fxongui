@@ -1,6 +1,6 @@
 # DrawTexture の上にパーティクルエフェクトを描画するサンプル
 
-GUI.DrawTexture の描画の上にパーティクルエフェクトを描画するサンプルです。
+DrawTexture の描画の上にパーティクルエフェクトを描画するサンプルです。
 
 ![screenshot](http://cloud.github.com/downloads/keijiro/unity-fxongui/screenshot.png)
 
